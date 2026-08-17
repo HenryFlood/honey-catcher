@@ -1,10 +1,4 @@
 // game!
-/*
-TODO:
-
-> Add controls for swiping (75%) <
-
-*/
 
 // canvas setup
 const canvas = document.getElementById("gameCanvas")
@@ -12,21 +6,21 @@ const ctx = canvas.getContext("2d")
 
 // images
 const imgPaths = {
-    bee: "/img/game/bee.png",
+    bee: "img/game/bee.png",
 
-    cloud_campus: "/img/game/cloud_campus.png",
-    phase1ground: "/img/game/phase1ground.png",
+    cloud_campus: "img/game/cloud_campus.png",
+    phase1ground: "img/game/phase1ground.png",
 
-    sunflower: "/img/game/sunflower.png",
+    sunflower: "img/game/sunflower.png",
 
-    ufo_on: "/img/game/ufo_on.png",
-    ufo_off: "/img/game/ufo_off.png",
-    ufo_projectile: "/img/game/ufo_projectile.png",
-    ufo_projectile_large: "/img/game/ufo_projectile_large.png",
+    ufo_on: "img/game/ufo_on.png",
+    ufo_off: "img/game/ufo_off.png",
+    ufo_projectile: "img/game/ufo_projectile.png",
+    ufo_projectile_large: "img/game/ufo_projectile_large.png",
 
-    cloud1: "/img/game/cloud1.png",
-    cloud2: "/img/game/cloud2.png",
-    cloud3: "/img/game/cloud3.png",
+    cloud1: "img/game/cloud1.png",
+    cloud2: "img/game/cloud2.png",
+    cloud3: "img/game/cloud3.png",
 }
 const img = {}
 var loadedImages = 0;
