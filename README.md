@@ -1,24 +1,5 @@
 # About
-Welcome! This is my "passion-project" for my FlexSchool application. Take a look around the site to learn about me and this project ("The Honey Catcher") that I revisited.
-
-# Todo
-- Add fun bee game!
-
-# Game Plan
-**Lore:**   
-The bee is trying to get the Cloud Campus and collect flowers before the UFO's invade!
-
-**Gameplay:**
-- The bee flies up automatically and the camera scrolls. 
-- The UFO's get a little harder with more altitude
-  - speed
-  - amount of UFO's
-  - projectile firing speed
-  - ability to fire projectiles (early UFO's can't fire projectiles)
-- The bee can move left/right.
-- The bee can collect flowers
-- The goal is to avoid the UFO's and eventually their projectiles for long enough, and then reach the Cloud Campus
-- 1 hit from a UFO or a projectile resets the game
+Welcome! This is my "Passion Project" for my FlexSchool application. Take a look around the site to learn about me and this project ("The Honey Catcher") that I revisited.
 
 # Finished
 # Pre-Aug 14
@@ -51,7 +32,7 @@ The bee is trying to get the Cloud Campus and collect flowers before the UFO's i
 - Added 100% of the game
 - Polished the game
 - Proofread the site
-
+- Push to GitHub
 
 # Look and feel
 Use the fonts and colors from the tri-fold board to make this site
