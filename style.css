@@ -1,0 +1,446 @@
+:root {
+    --navbar-height: 30px;
+
+    --default-border-color: gold;
+    --header-border-color: rgb(245, 230, 16);
+    --main-text-color: rgb(230, 201, 34);
+    --navbar-text-color: yellow;
+    --divider-color: rgb(236, 181, 15);
+
+    --site-bg-fallback: rgb(127, 63, 31);
+    --navbar-bg-fallback: rgb(148, 69, 30);
+
+    --link-color: rgb(230, 195, 24);
+    --link-hover-color: rgb(226, 213, 36);
+    --link-active-color: rgb(206, 195, 42);
+
+    --footer-link-color: white;
+    --footer-link-hover-color: whitesmoke;
+    --footer-link-active-color: rgb(234, 234, 234);
+
+    --paper-scale-hover-amount: 103%;
+    --paper-box-shadow-hover-amount: 0px 0px 13px 0px black;
+
+    --subtitle-text-color: #433e21;
+}
+
+/*
+Copyright 2015 The Courier Prime Project Authors (https://github.com/quoteunquoteapps/CourierPrime).
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
+
+~
+Full required license visible in ./font/Courier_Prime/OFL.txt
+*/
+@font-face {
+    font-family: "Courier Prime";
+    src: url("font/Courier_Prime/CourierPrime-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Courier Prime Bold";
+    src: url("font/Courier_Prime/CourierPrime-Bold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Courier Prime Italic";
+    src: url("font/Courier_Prime/CourierPrime-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Courier Prime BoldItalic";
+    src: url("font/Courier_Prime/CourierPrime-BoldItalic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+}
+
+/*
+Copyright (c) 2009, Mark Simonson (http://www.ms-studio.com, mark@marksimonson.com),
+with Reserved Font Name Anonymous Pro.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
+
+~
+Full required license visible in ./font/Courier_Prime/OFL.txt
+*/
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url("font/Anonymous_Pro/AnonymousPro-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Anonymous Pro Bold";
+    src: url("font/Anonymous_Pro/AnonymousPro-Bold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Anonymous Pro Italic";
+    src: url("font/Anonymous_Pro/AnonymousPro-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Anonymous Pro BoldItalic";
+    src: url("font/Anonymous_Pro/AnonymousPro-BoldItalic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+}
+
+html {
+    overscroll-behavior: none;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    background: url("img/cardboard-bg.jpg");
+    background-color: var(--site-bg-fallback);
+
+    font-family: "Anonymous Pro";
+    background-size: 150%;
+    background-repeat: repeat;
+    margin-top: calc(var(--navbar-height) + 100px);
+}
+
+.siteHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.paperSectionColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.paperSection {
+    will-change: transform;
+
+    border: 5px solid var(--default-border-color);
+    border-image: url("img/yellow-paper-bg3.jpg") 1% round;
+
+    color: var(--main-text-color);
+    padding: 10px;
+
+    background-image: url("img/paper-bg2.jpg");
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: overlay;
+
+    background-size: 100%;
+
+    display: inline-block;
+    box-shadow: 0px 0px 8px 0px black;
+
+    max-width: 40vw;
+    min-width: auto;
+
+    transition-duration: 0.2s;
+}
+
+.paperSection:has(img) {
+    padding: 0px !important;
+    max-height: none !important;
+    min-height: none !important;
+}
+
+.paperSection b {
+    font-family: "Anonymous Pro Bold";
+}
+
+.paperSection i {
+    font-family: "Anonymous Pro Italic";
+}
+
+.paperSection strong {
+    font-family: "Anonymous Pro BoldItalic";
+}
+
+
+.paperSection:has(.imageSubtitle) {
+    position: relative;
+}
+
+.paperSection img {
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+
+.imageSubtitle {
+    display: inline-block;
+    position: absolute;
+
+    left: 0px;
+    bottom: 10px;
+    padding: 5px;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+
+    backdrop-filter: blur(2px);
+
+    color: var(--subtitle-text-color);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0px 10px 10px 0px;
+
+    z-index: 100;
+}
+
+.paperSection.left {
+    margin-right: auto;
+}
+
+.paperSection.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.paperSection.right {
+    margin-left: auto;
+}
+
+canvas.paperSection {
+    height: 80vh;
+    width: calc(50vh / 1.25);
+    max-width: none;
+
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+canvas {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+
+    cursor: none;
+}
+
+.paperSection:hover:not(canvas),
+.paperSection.center:hover:not(canvas),
+.paperSection.left:hover:not(canvas) {
+    rotate: 1deg;
+    scale: var(--paper-scale-hover-amount);
+    box-shadow: var(--paper-box-shadow-hover-amount);
+    z-index: 100;
+}
+
+.paperSection.right:hover {
+    rotate: -1deg;
+    scale: var(--paper-scale-hover-amount);
+    box-shadow: var(--paper-box-shadow-hover-amount);
+    z-index: 100;
+}
+
+.paperSection h1 {
+    margin: 0px 0px 10px 0px;
+    font-family: "Courier Prime Bold";
+    font-size: 30px;
+}
+
+.siteHeader .paperSection {
+    will-change: transform;
+
+    font-family: "Courier Prime Bold";
+    font-size: clamp(1.5rem, 2vw, 5rem);
+
+    background-image: url("img/paper-bg2.jpg");
+    background-color: rgba(255, 255, 255, 0.65);
+    background-blend-mode: overlay;
+
+    border: 8px solid var(--header-border-color);
+    border-image: url("img/yellow-paper-bg2.jpg") 1% round;
+}
+
+.divider {
+    --vertical-margin: 20px;
+
+    border-bottom: 5px dotted var(--divider-color);
+    height: 0px;
+    margin: var(--vertical-margin) 0 var(--vertical-margin) 0;
+    width: 100vw;
+    display: block;
+    opacity: 0.8;
+}
+
+.footer {
+    color: white;
+    opacity: 0.8;
+    text-shadow: 0.5px 0.5px 0.1px white;
+}
+
+.footer .noShadow {
+    text-shadow: 0px 0px 0px white;
+}
+
+.footer a {
+    color: var(--footer-link-color);
+    text-shadow: 0.5px 0.5px 0.1px var(--footer-link-color);
+}
+
+.footer a:hover {
+    color: var(--footer-link-hover-color);
+    text-shadow: 0.5px 0.5px 0.1px var(--footer-link-hover-color);
+}
+
+.footer a:active {
+    color: var(--footer-link-active-color);
+    text-shadow: 0.5px 0.5px 0.1px var(--footer-link-active-color);
+}
+
+a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: underline;
+
+    transition-duration: 0.2s;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+a:active {
+    color: var(--link-active-color);
+}
+
+ul {
+    margin-top: 3px;
+    margin-left: -10px;
+}
+
+.navbar {
+    background-image: url("img/cardboard-bg3.jpeg");
+    background-size: 150%;
+    background-color: var(--navbar-bg-fallback);
+    background-repeat: no-repeat;
+
+    box-shadow: 0px 0px 8px 0px black;
+
+    font-family: "Courier Prime";
+
+    position: fixed;
+    z-index: 1000;
+
+    top: 0px;
+    left: 0px;
+
+    min-height: var(--navbar-height);
+    width: 100%;
+
+    user-select: none;
+    -moz-user-select: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbarShortcut {
+    color: var(--navbar-text-color);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1px);
+
+    cursor: pointer;
+
+    min-height: var(--navbar-height);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+
+    font-size: 18px;
+
+    transition-duration: 0.2s;
+}
+
+.navbarShortcut:hover {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1.5px);
+}
+
+.navbarShortcut:active {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+}
+
+/* Computer/Tablet screen sizes */
+@media(max-width: 900px) {
+    .navbarShortcut {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 800px) {
+    .navbarShortcut {
+        font-size: 11.5px;
+    }
+
+    :root {
+        --navbar-height: 20px;
+    }
+}
+
+@media(max-width: 650px) {
+    .navbarShortcut {
+        font-size: 10px;
+    }
+
+    :root {
+        --navbar-height: 20px;
+    }
+}
+
+@media(max-width: 580px) {
+    .navbarShortcut {
+        font-size: 9.5px;
+    }
+
+    :root {
+        --navbar-height: 20px;
+    }
+}
+
+/* Phone screen sizes */
+@media(max-width: 450px) {
+    .navbarShortcut {
+        font-size: 8px;
+    }
+
+    :root {
+        --navbar-height: 20px;
+    }
+
+    .paperSection {
+        max-width: 80vw;
+    }
+}
+
+@media(max-width: 410px) {
+    canvas.paperSection {
+        height: 80vh;
+        width: calc(100vw - 50px);
+    }
+}

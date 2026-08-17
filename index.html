@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Honey Catcher</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbarShortcut" data-toId="about">About</div>
+        <div class="navbarShortcut" data-toId="inventionConvention">Invention Convention</div>
+        <div class="navbarShortcut" data-toId="board">Board</div>
+        <div class="navbarShortcut" data-toId="nextSteps">Next Steps</div>
+        <div class="navbarShortcut" data-toId="game">Game!</div>
+    </div>
+
+    <div class="siteHeader">
+        <div class="paperSection">
+            The
+        </div>
+        <div class="paperSection">
+            Honey
+        </div>
+        <div class="paperSection">
+            Catcher
+        </div>
+    </div>
+
+    <span class="divider"></span>
+
+    <div class="paperSectionColumn">
+        <div class="paperSection" id="about">
+            <h1>Who am I?</h1>
+            My name is Henry Flood, and I'm from Connecticut. I've always loved science and engineering, so I enrolled
+            in my elementary school's Invention Convention in 4th Grade. Now, I'm a High Schooler, and for my "Passion
+            Project"
+            application, I'm revisting this project by designing a website for it.
+        </div>
+        <div class="paperSection right">
+            <h1>My Background in CS</h1>
+            I put a lot of care into everything I do, and web design isn't an exception! I'm a self-taught computer
+            programmer who taught myself during the COVID-19 pandemic.
+        </div>
+        <div class="paperSection left">
+            <h1>About the Site</h1>
+            The site is designed to mimic a traditional tri-fold board. Though it is optimized for viewing across
+            devices and browsers, I recommend viewing this on a computer so that you can take in all the little details
+            I added (eg, some elements play slight animations on hover). The animations aren't overdone, as I also want
+            to ensure accessibility. This website can be viewed via screen reader.
+
+            <br><br><i>I'll let you find the rest for yourself!</i>
+        </div>
+        <div class="paperSection right">
+            <h1>Licensing</h1>
+            I've taken care to attribute all assets I didn't make myself. You can view all credits and AI disclaimers at
+            the page footer.
+        </div>
+    </div>
+
+    <span class="divider"></span>
+
+    <div class="paperSectionColumn">
+        <div class="paperSection" id="inventionConvention">
+            <h1>Planning for the Invention Convention</h1>
+            Planning happened over a few months. We had to draft out all of our ideas, research if they were already
+            taken, and eventually present in front of judges.
+        </div>
+        <div class="paperSection right">
+            <h1>End Result</h1>
+            I placed second and made it to the state finals. I didn't rank any higher, but it was a fun experience
+            overall!
+
+            <br><br><i>Let's check out the board that took me there.</i>
+        </div>
+    </div>
+
+    <span class="divider"></span>
+
+    <div class="paperSectionColumn">
+        <div class="paperSection" id="board">
+            <h1>Where? When? Why?</h1>
+            I made this at Ridgebury Elementary school in Ridgefield, CT for my schools Invention Convention in 4th
+            Grade.
+        </div>
+        <div class="paperSection right">
+            <h1>The Problem</h1>
+            The problem I am trying to solve is honey dripping down the outside of its jar and getting stuck to where
+            the jar is placed.
+        </div>
+        <div class="paperSection center">
+            <img src="img/before.jpg" alt="Before photo">
+            <span class="imageSubtitle">Before the Honey Catcher :(</span>
+        </div>
+        <div class="paperSection left">
+            <h1>The Solution</h1>
+            My solution is <strong>The Honey Catcher</strong>, which is a food grade and BPA free silicone collar that
+            is placed around
+            the neck of a honey jar to prevent the honey from dripping down the outside of the jar.
+        </div>
+        <div class="paperSection center">
+            <img src="img/after.jpg" alt="After photo">
+            <span class="imageSubtitle">After the Honey Catcher!</span>
+        </div>
+        <div class="paperSection right">
+            <h1>Sales</h1>
+            Sales will be done in physical stores via word-of mouth marketing.
+        </div>
+
+        <div class="paperSection left">
+            <h1>Testimonial</h1>
+            “It works great! [We] gave R a shot at it also and she loved how it caught the drops and didn't make a 'mess
+            mess'. We spilled a little on the connecting piece and it wiped off easily. It's such a great idea that
+            could work for so many condiment jars. Great job Henry!”
+
+            <br><br><b>- A&P (neighbors)</b>
+
+            <br><br><i>Names abbreviated to first initial for privacy</i>
+        </div>
+    </div>
+
+    <span class="divider"></span>
+
+    <div class="paperSectionColumn">
+        <div class="paperSection" id="nextSteps">
+            <h1>Next Steps</h1>
+            I'm currently persuing patenting options (with an attorney) and gathering information on the type of
+            silicone to use, the
+            manufacturer, and sizing of honey bottles.
+        </div>
+    </div>
+
+    <span class="divider"></span>
+
+    <div class="paperSectionColumn">
+        <div class="paperSection" id="game">
+            <h1>Game</h1>
+            Here's a short bee-themed game I made where you have to dodge obstacles and get to the "Cloud" Campus!
+
+            <br><br><a id="playGameLinkInSection">Play!</a>
+        </div>
+
+        <div class="paperSection right" id="game">
+            <h1>How to Play</h1>
+            <b>Desktop Controls</b>
+            <ul>
+                <li>A/D, J/L, or Left/Right keys to move</li>
+            </ul>
+
+            <b>Mobile Controls</b>
+            <ul>
+                <li>Swipe left/right</li>
+            </ul>
+
+            <b>Instructions</b><br>
+            Dodge the UFO's and their projectiles for long enough in order to climb to the Cloud Campus! Collecting
+            flowers gives you bonus points.
+        </div>
+
+        <canvas class="paperSection center" id="gameCanvas"></canvas>
+    </div>
+
+    <span class="divider"></span>
+
+    <div class="footer">
+        Website made by Henry Flood, Aug 14 - Aug 17 of 2026. No generative AI was used in the coding of this
+        website nor in the writing of the website.
+
+        <br><br>
+        Minimal generative AI was used for the creation of background graphics:
+        <ul>
+            <li>
+                <a href="https://grok.com/imagine">Yellow Paper
+                    Image by Grok AI: "Generate a picture of construction paper that should fill the screen, hex code
+                    base of color #FFD700. Minimal texture. Context: website background graphic"</a>: <a
+                    href="img/yellow-paper-bg3.jpg">yellow-paper-bg3.jpg</a>
+            </li>
+        </ul>
+        Sound Attribution:
+        <ul>
+            <li>Sound Effect by <a
+                    href="https://pixabay.com/users/driken5482-45721595/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=236677">Driken
+                    Stan</a> from <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=236677">Pixabay</a>:
+                <a href="sound/game/coin_ping.mp3">coin_ping.mp3</a>
+            </li>
+
+            <li>Pixabay: <a href="sound/game/hurt.mp3">hurt.mp3</a></li>
+
+            <li>Sound Effect by <a
+                    href="https://pixabay.com/users/vadim_makes_sound-54823268/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=552982">Vadim</a>
+                from <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=552982">Pixabay</a>:
+                <a href="sound/game/win.mp3">win.mp3</a>
+            </li>
+
+            <li>Sound Effect by <a
+                    href="https://pixabay.com/users/vadim_makes_sound-54823268/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=554505">Vadim</a>
+                from <a
+                    href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=554505">Pixabay</a>:
+                <a href="sound/game/select.mp3">select.mp3</a></li>
+        </ul>
+
+        Image Attribution:
+        <ul>
+            <li>
+                <a href="https://www.magnific.com/free-photo/white-crumpled-paper-texture-background_1189775.htm">
+                    Image by aopsan on Magnific</a>: <a href="/img/paper-bg2.jpg">paper-bg-2.jpg</a>
+            </li>
+            <li>
+                <a href="https://www.magnific.com/free-ai-image/3d-rendering-wrinkled-sheet-paper_370106126.htm">Yellow
+                    Paper Image by Magnific</a>: <a href="/img/yellow-paper-bg2.jpg">yellow-paper-bg-2.jpg</a>
+            </li>
+            <li>
+                Photo by <a
+                    href="https://pixnio.com/textures-and-patterns/paper-texure/cardboard-carton-paper-texture">PPD</a>
+                on <a href="https://pixnio.com/">Pixnio</a>: <a href="img/cardboard-bg.jpg">cardboard-bg.jpg</a>
+            </li>
+            <li>
+                Photo by <a
+                    href="https://pixnio.com/textures-and-patterns/paper-texure/crumpled-paper-old-sandpaper-texture">PPD</a>
+                on <a href="https://pixnio.com/">Pixnio</a>: <a href="img/cardboard-bg3.jpeg">cardboard-bg3.jpeg</a>
+            </li>
+        </ul>
+
+        Font Attribution:
+        <ul>
+            <li>
+                <a href="/font/Anonymous_Pro/OFL.txt">
+                    Anonymous Pro
+                </a>
+            </li>
+            <li>
+                <a href="/font/Courier_Prime/OFL.txt">
+                    Courier Prime
+                </a>
+            </li>
+        </ul>
+
+        Powered by honey <span class="noShadow">💛</span>.
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
