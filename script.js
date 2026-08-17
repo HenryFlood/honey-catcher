@@ -39,10 +39,10 @@ for (let name in imgPaths) {
 
 // sounds
 const soundPaths = {
-    coin_ping: "/sound/game/coin_ping.mp3",
-    hurt: "/sound/game/hurt.mp3",
-    win: "/sound/game/win.mp3",
-    select: "/sound/game/select.mp3",
+    coin_ping: "sound/game/coin_ping.mp3",
+    hurt: "sound/game/hurt.mp3",
+    win: "sound/game/win.mp3",
+    select: "sound/game/select.mp3",
 }
 const sound = {}
 
